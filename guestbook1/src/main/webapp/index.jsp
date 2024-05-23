@@ -1,9 +1,9 @@
 <%@page import="java.util.List"%>
-<%@page import="guestbook.vo.GuestBookVo"%>
-<%@page import="guestbook.dao.GuestBookDao"%>
+<%@page import="guestbook.vo.GuestbookVo"%>
+<%@page import="guestbook.dao.GuestbookDao"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%
-	List<GuestBookVo> list = new GuestBookDao().findAll();
+	List<GuestbookVo> list = new GuestbookDao().findAll();
 %>
 <html>
 <head>
@@ -29,7 +29,7 @@
 	
 	<%
 		int contentNo = list.size();
-		for(GuestBookVo vo : list) {
+		for(GuestbookVo vo : list) {
 	%>
 	<table width=510 border=1>
 		<tr>

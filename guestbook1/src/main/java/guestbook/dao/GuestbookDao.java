@@ -8,9 +8,9 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import guestbook.vo.GuestBookVo;
+import guestbook.vo.GuestbookVo;
 
-public class GuestBookDao {
+public class GuestbookDao {
 	
 	private Connection getConnection() throws SQLException {
 		Connection conn = null;
@@ -27,7 +27,7 @@ public class GuestBookDao {
 		return conn;
 	}
 	
-	public int insert(GuestBookVo vo) {
+	public int insert(GuestbookVo vo) {
 		int result = 0;
 
 		try (
@@ -68,8 +68,8 @@ public class GuestBookDao {
 	}
 	
 	
-	public List<GuestBookVo> findAll() {
-		List<GuestBookVo> result = new ArrayList<>();
+	public List<GuestbookVo> findAll() {
+		List<GuestbookVo> result = new ArrayList<>();
 
 		try (
 			Connection conn = getConnection();
@@ -82,7 +82,7 @@ public class GuestBookDao {
 				String contents = rs.getString(3);
 				String reg_date = rs.getString(4);
 
-				GuestBookVo vo = new GuestBookVo();
+				GuestbookVo vo = new GuestbookVo();
 				vo.setNo(no);
 				vo.setName(name);
 				vo.setContents(contents);

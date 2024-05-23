@@ -1,5 +1,5 @@
-<%@page import="guestbook.vo.GuestBookVo"%>
-<%@page import="guestbook.dao.GuestBookDao"%>
+<%@page import="guestbook.vo.GuestbookVo"%>
+<%@page import="guestbook.dao.GuestbookDao"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%
 	request.setCharacterEncoding("utf-8");
@@ -8,11 +8,11 @@
 	String password = request.getParameter("password");
 	String contents = request.getParameter("message");
 	
-	GuestBookVo vo = new GuestBookVo();
+	GuestbookVo vo = new GuestbookVo();
 	vo.setName(name);
 	vo.setPassword(password);
 	vo.setContents(contents);	
 
-	new GuestBookDao().insert(vo);
+	new GuestbookDao().insert(vo);
 	response.sendRedirect("/guestbook1");
 %>
