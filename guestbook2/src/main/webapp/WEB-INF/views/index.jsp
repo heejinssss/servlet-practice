@@ -10,6 +10,7 @@
 <title>방명록</title>
 </head>
 <body>
+	<h1>방명록을 남겨주세요</h1>
 	<form action="<%=request.getContextPath()%>/gb" method="post">
 		<input type="hidden" name="a" value="add">
 		
